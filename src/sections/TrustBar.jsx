@@ -4,7 +4,7 @@ import { CheckCircle } from 'lucide-react';
 
 const stats = [
   {
-    icon: <CheckCircle className="text-blue-600 group-hover:text-blue-700 transition-colors" size={22} aria-hidden="true" />, 
+    icon: <CheckCircle className="text-[#004289] group-hover:text-[#00336b] transition-colors" size={22} aria-hidden="true" />, 
     label: '500+ Cars Washed',
     desc: 'Experience you can trust',
   },

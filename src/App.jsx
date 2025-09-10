@@ -30,8 +30,8 @@ function App() {
         <TrustBar />
         <HowItWorks />
         <Services onSelectPackage={openBooking} />
-    <Differentiators />
-    <Testimonials />
+        <Differentiators />
+        <Testimonials />
         {/* Add other sections here: Testimonials, FinalCTA, Footer, etc. */}
       </div>
       <BookingModal
@@ -39,8 +39,8 @@ function App() {
         onClose={closeBooking}
         selectedPackage={selectedPackage}
       />
-  <FinalCTA onBook={openBooking} />
-  <Footer />
+      <FinalCTA onBook={openBooking} />
+      <Footer />
     </>
   );
 }
