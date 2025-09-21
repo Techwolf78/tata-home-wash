@@ -40,12 +40,12 @@ export default function Header() {
         {/* Logo and Brand */}
         <Link to="/" className="flex items-center group" aria-label="ShineX Home">
           <div className="relative">
-            <div className="w-12 h-12 bg-gradient-to-br from-primary-600 to-primary-700 rounded-xl flex items-center justify-center shadow-soft group-hover:shadow-medium transition-all duration-300 group-hover:scale-105">
+            <div className="w-12 h-12 bg-gradient-to-br from-[#0437F2] to-[#0437F2] rounded-xl flex items-center justify-center shadow-soft group-hover:shadow-medium transition-all duration-300 group-hover:scale-105">
               <Sparkles className="w-7 h-7 text-white animate-pulse" aria-hidden="true" />
             </div>
           </div>
           <div className="ml-4">
-            <span className="font-bold text-2xl text-neutral-900 group-hover:text-primary-600 transition-colors">
+            <span className="font-bold text-2xl text-neutral-900 group-hover:text-[#0437F2] transition-colors">
               ShineX
             </span>
             <div className="text-xs text-neutral-500 font-medium -mt-1">
@@ -62,12 +62,12 @@ export default function Header() {
               to={item.path}
               className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-200 group ${
                 location.pathname === item.path
-                  ? 'text-primary-600 bg-primary-50'
-                  : 'text-neutral-700 hover:text-primary-600 hover:bg-neutral-50'
+                  ? 'text-[#0437F2] bg-[#0437F2]/10'
+                  : 'text-neutral-700 hover:text-[#0437F2] hover:bg-neutral-50'
               }`}
             >
               {item.label}
-              <span className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-primary-600 group-hover:w-full transition-all duration-200 ${
+              <span className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-0 h-0.5 bg-[#0437F2] group-hover:w-full transition-all duration-200 ${
                 location.pathname === item.path ? 'w-full' : ''
               }`} />
             </Link>
@@ -88,7 +88,7 @@ export default function Header() {
             <div className="w-px h-4 bg-neutral-300" />
             <a
               href="mailto:support@shinex.com"
-              className="flex items-center gap-2 text-neutral-600 hover:text-primary-600 transition-colors group"
+              className="flex items-center gap-2 text-neutral-600 hover:text-[#0437F2] transition-colors group"
             >
               <Mail className="w-4 h-4 group-hover:scale-110 transition-transform" aria-hidden="true" />
               <span className="font-medium">support@shinex.com</span>
@@ -97,7 +97,7 @@ export default function Header() {
 
           {/* CTA Button */}
           <Link to="/booking">
-            <Button className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white px-6 py-2.5 rounded-lg shadow-soft hover:shadow-medium transition-all duration-200 flex items-center gap-2 hover:scale-105">
+            <Button className="bg-gradient-to-r from-[#0437F2] to-[#0437F2] hover:from-[#0329c1] hover:to-[#0329c1] text-white px-6 py-2.5 rounded-lg shadow-soft hover:shadow-medium transition-all duration-200 flex items-center gap-2 hover:scale-105">
               Book Now
               <Sparkles className="w-4 h-4" aria-hidden="true" />
             </Button>
@@ -127,8 +127,8 @@ export default function Header() {
                   to={item.path}
                   className={`px-4 py-3 rounded-lg font-medium transition-colors ${
                     location.pathname === item.path
-                      ? 'text-primary-600 bg-primary-50'
-                      : 'text-neutral-700 hover:text-primary-600 hover:bg-neutral-50'
+                      ? 'text-[#0437F2] bg-[#0437F2]/10'
+                      : 'text-neutral-700 hover:text-[#0437F2] hover:bg-neutral-50'
                   }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -142,7 +142,7 @@ export default function Header() {
               <div className="flex flex-col gap-4">
                 <a
                   href="tel:+919999999999"
-                  className="flex items-center gap-3 text-neutral-600 hover:text-primary-600 transition-colors"
+                  className="flex items-center gap-3 text-neutral-600 hover:text-[#0437F2] transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <Phone className="w-5 h-5" aria-hidden="true" />
@@ -150,7 +150,7 @@ export default function Header() {
                 </a>
                 <a
                   href="mailto:support@shinex.com"
-                  className="flex items-center gap-3 text-neutral-600 hover:text-primary-600 transition-colors"
+                  className="flex items-center gap-3 text-neutral-600 hover:text-[#0437F2] transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   <Mail className="w-5 h-5" aria-hidden="true" />
@@ -161,7 +161,7 @@ export default function Header() {
 
             {/* Mobile CTA */}
             <Link to="/booking" onClick={() => setIsMenuOpen(false)}>
-              <Button className="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white py-3 rounded-lg flex items-center justify-center gap-2">
+              <Button className="w-full bg-gradient-to-r from-[#0437F2] to-[#0437F2] hover:from-[#0329c1] hover:to-[#0329c1] text-white py-3 rounded-lg flex items-center justify-center gap-2">
                 Book Now
                 <Sparkles className="w-5 h-5" aria-hidden="true" />
               </Button>

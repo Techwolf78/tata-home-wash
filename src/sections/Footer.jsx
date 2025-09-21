@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="md:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-8 h-8 bg-primary-600 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 bg-[#0437F2] rounded-lg flex items-center justify-center">
                 <Sparkles className="w-5 h-5 text-white" aria-hidden="true" />
               </div>
               <span className="font-bold text-xl">ShineX</span>
@@ -79,23 +79,23 @@ export default function Footer() {
             <h3 className="font-semibold text-white mb-4">Contact Us</h3>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4 text-primary-400 flex-shrink-0" aria-hidden="true" />
+                <Phone className="w-4 h-4 text-[#0437F2] flex-shrink-0" aria-hidden="true" />
                 <a href="tel:+919999999999" className="text-neutral-400 hover:text-white transition-colors text-sm">
                   +91 99999 99999
                 </a>
               </div>
               <div className="flex items-center gap-3">
-                <Mail className="w-4 h-4 text-primary-400 flex-shrink-0" aria-hidden="true" />
+                <Mail className="w-4 h-4 text-[#0437F2] flex-shrink-0" aria-hidden="true" />
                 <a href="mailto:support@shinex.com" className="text-neutral-400 hover:text-white transition-colors text-sm">
                   support@shinex.com
                 </a>
               </div>
               <div className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-primary-400 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                <MapPin className="w-4 h-4 text-[#0437F2] flex-shrink-0 mt-0.5" aria-hidden="true" />
                 <span className="text-neutral-400 text-sm">Pune, Maharashtra, India</span>
               </div>
               <div className="flex items-start gap-3">
-                <Clock className="w-4 h-4 text-primary-400 flex-shrink-0 mt-0.5" aria-hidden="true" />
+                <Clock className="w-4 h-4 text-[#0437F2] flex-shrink-0 mt-0.5" aria-hidden="true" />
                 <span className="text-neutral-400 text-sm">Mon-Sat: 8AM-6PM<br />Sun: 9AM-4PM</span>
               </div>
             </div>

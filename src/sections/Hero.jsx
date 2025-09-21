@@ -27,7 +27,7 @@ export default function Hero() {
         </div>
 
         <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-neutral-900 mb-6 leading-tight animate-slide-up">
-          ShineX: <span className="text-primary-600 bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent">Ask for Wash</span>
+          ShineX: <span className="bg-gradient-to-r from-[#0437F2] to-[#0329c1] bg-clip-text text-transparent">Ask for Wash</span>
         </h1>
 
         <p className="text-lg md:text-xl text-neutral-600 mb-10 max-w-2xl mx-auto leading-relaxed animate-slide-up">
@@ -37,7 +37,7 @@ export default function Hero() {
         <div className="flex flex-col sm:flex-row gap-4 animate-slide-up">
           <Link to="/booking">
             <Button
-              className="group text-base md:text-lg px-8 py-4 rounded-xl shadow-soft bg-primary-600 hover:bg-primary-700 text-white focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 transition-all duration-200 flex items-center gap-3 hover:shadow-medium transform hover:-translate-y-0.5"
+              className="group text-base md:text-lg px-8 py-4 rounded-xl shadow-soft bg-[#0437F2] hover:bg-[#0329c1] text-white focus-visible:ring-2 focus-visible:ring-[#0437F2] focus-visible:ring-offset-2 transition-all duration-200 flex items-center gap-3 hover:shadow-medium transform hover:-translate-y-0.5"
               aria-label="Book a Wash"
             >
               Book a Wash
