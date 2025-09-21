@@ -30,7 +30,7 @@ export default function TrustBar() {
         {stats.map((stat) => (
           <div
             key={stat.label}
-            className="group flex items-center gap-4 px-6 py-4 rounded-xl bg-white/90 hover:bg-white shadow-soft hover:shadow-medium transition-all duration-300 cursor-default min-w-[200px] md:min-w-0 border border-neutral-200/50"
+            className="group flex items-center gap-3 md:gap-4 px-4 md:px-6 py-3 md:py-4 rounded-xl bg-white/90 hover:bg-white shadow-soft hover:shadow-medium transition-all duration-300 cursor-default border border-neutral-200/50"
             tabIndex={0}
             aria-label={stat.label + '. ' + stat.desc}
           >

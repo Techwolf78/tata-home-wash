@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Button } from '../components/Button';
 import { Menu, X, Sparkles, Phone, Mail } from 'lucide-react';
 
@@ -7,6 +7,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +16,10 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  useEffect(() => {
+    console.log('Location changed to:', location.pathname);
+  }, [location.pathname]);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -45,7 +50,7 @@ export default function Header() {
             </div>
           </div>
           <div className="ml-4">
-            <span className="font-bold text-2xl text-neutral-900 group-hover:text-[#0437F2] transition-colors">
+            <span className="font-bold text-xl md:text-2xl text-neutral-900 group-hover:text-[#0437F2] transition-colors">
               ShineX
             </span>
             <div className="text-xs text-neutral-500 font-medium -mt-1">
@@ -117,23 +122,29 @@ export default function Header() {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-white border-t border-neutral-200/50 shadow-medium animate-slide-up">
+        <div className="lg:hidden bg-white border-t border-neutral-200/50 shadow-medium animate-slide-up absolute top-full left-0 right-0 z-[60]">
           <div className="container mx-auto px-6 py-6">
             {/* Mobile Navigation */}
             <nav className="flex flex-col gap-2 mb-6">
               {navItems.map((item) => (
-                <Link
+                <button
                   key={item.path}
-                  to={item.path}
-                  className={`px-4 py-3 rounded-lg font-medium transition-colors ${
+                  className={`px-4 py-3 rounded-lg font-medium transition-colors text-left block w-full ${
                     location.pathname === item.path
                       ? 'text-[#0437F2] bg-[#0437F2]/10'
                       : 'text-neutral-700 hover:text-[#0437F2] hover:bg-neutral-50'
                   }`}
-                  onClick={() => setIsMenuOpen(false)}
+                  onClick={() => {
+                    console.log('Mobile nav button clicked:', item.label, 'Path:', item.path);
+                    console.log('Current location before navigation:', location.pathname);
+                    setIsMenuOpen(false);
+                    console.log('Menu closed, navigating to:', item.path);
+                    navigate(item.path);
+                    console.log('Navigation called with:', item.path);
+                  }}
                 >
                   {item.label}
-                </Link>
+                </button>
               ))}
             </nav>
 
@@ -160,12 +171,17 @@ export default function Header() {
             </div>
 
             {/* Mobile CTA */}
-            <Link to="/booking" onClick={() => setIsMenuOpen(false)}>
-              <Button className="w-full bg-gradient-to-r from-[#0437F2] to-[#0437F2] hover:from-[#0329c1] hover:to-[#0329c1] text-white py-3 rounded-lg flex items-center justify-center gap-2">
-                Book Now
-                <Sparkles className="w-5 h-5" aria-hidden="true" />
-              </Button>
-            </Link>
+            <button
+              onClick={() => {
+                console.log('Mobile CTA button clicked');
+                setIsMenuOpen(false);
+                navigate('/booking');
+              }}
+              className="w-full bg-gradient-to-r from-[#0437F2] to-[#0437F2] hover:from-[#0329c1] hover:to-[#0329c1] text-white py-3 rounded-lg flex items-center justify-center gap-2"
+            >
+              Book Now
+              <Sparkles className="w-5 h-5" aria-hidden="true" />
+            </button>
           </div>
         </div>
       )}

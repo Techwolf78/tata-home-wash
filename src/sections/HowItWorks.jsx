@@ -24,7 +24,7 @@ export default function HowItWorks() {
     <section id="process" className="py-20 bg-gradient-to-br from-white via-gray-50 to-gray-100">
       <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-12 text-gray-900 tracking-tight">
-          <span className="bg-gradient-to-r from-primary-600 via-primary-600/80 to-primary-700 bg-clip-text text-transparent">How It Works</span>
+          How It Works
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {steps.map((step, i) => (

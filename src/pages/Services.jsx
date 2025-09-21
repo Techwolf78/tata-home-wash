@@ -31,7 +31,7 @@ const services = [
 
 function Services() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-neutral-50 to-primary-50/30">
+    <div className="md:min-h-screen bg-gradient-to-br from-neutral-50 to-primary-50/30">
       <div className="container mx-auto px-6 pt-24 pb-16">
         {/* Header */}
         <div className="text-center mb-16 animate-slide-up">

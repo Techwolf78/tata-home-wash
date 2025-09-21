@@ -45,14 +45,14 @@ export default function Services() {
   return (
     <section id="services" className="py-20 bg-gradient-to-br from-white via-gray-50 to-gray-100">
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-12 text-gray-900 tracking-tight">
-          <span className="bg-gradient-to-r from-primary-600 via-primary-600/80 to-primary-700 bg-clip-text text-transparent">Our Services & Pricing</span>
+        <h2 className="text-3xl md:text-5xl font-extrabold text-center mb-8 md:mb-12 text-gray-900 tracking-tight">
+          Our Services & Pricing
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
           {packages.map((pkg) => (
             <div
               key={pkg.name}
-              className={`group rounded-2xl p-8 flex flex-col items-center text-center shadow-lg hover:shadow-xl transition-shadow duration-200 border border-gray-100 hover:border-primary-600/30 focus-within:ring-2 focus-within:ring-primary-600 focus-within:ring-offset-2 outline-none bg-white relative ${selected === pkg.name ? 'ring-2 ring-primary-600 ring-offset-2' : ''}`}
+              className={`group rounded-2xl p-6 md:p-8 flex flex-col items-center text-center shadow-lg hover:shadow-xl transition-shadow duration-200 border border-gray-100 hover:border-primary-600/30 focus-within:ring-2 focus-within:ring-primary-600 focus-within:ring-offset-2 outline-none bg-white relative ${selected === pkg.name ? 'ring-2 ring-primary-600 ring-offset-2' : ''}`}
               tabIndex={0}
               aria-label={pkg.name + ' package'}
             >

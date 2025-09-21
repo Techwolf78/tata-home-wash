@@ -14,7 +14,7 @@ import BigVehicleWash from "./pages/services/BigVehicleWash";
 function App() {
   return (
     <Router>
-      <div className="min-h-screen flex flex-col">
+      <div className="md:min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow">
           <Routes>

@@ -5,20 +5,20 @@ import { Check, Star, ArrowRight, Clock, Shield, Sparkles } from "lucide-react";
 const pricing = [
   {
     name: "Basic Wash",
-    price: "$50",
+    price: "₹1499",
     description: "Essential exterior cleaning",
     features: ["Exterior wash", "Wheel cleaning", "Quick dry"],
   },
   {
     name: "Premium Wash",
-    price: "$80",
+    price: "₹2499",
     description: "Complete cleaning service",
     features: ["Everything in Basic", "Interior vacuum", "Undercarriage wash", "Tire treatment"],
     popular: true,
   },
   {
     name: "Deluxe Wash",
-    price: "$120",
+    price: "₹3999",
     description: "Full detailing service",
     features: ["Everything in Premium", "Engine bay clean", "Wax protection", "Fleet discount available"],
   },
@@ -44,7 +44,7 @@ const features = [
 
 function BigVehicleWash() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-neutral-50 to-primary-50/30">
+    <div className="md:min-h-screen bg-gradient-to-br from-neutral-50 to-primary-50/30">
       <div className="container mx-auto px-6 pt-24 pb-16">
         {/* Header */}
         <div className="text-center mb-16 animate-slide-up">
