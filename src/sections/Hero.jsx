@@ -1,99 +1,176 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { Button } from '../components/Button';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import React from "react";
+import { Link } from "react-router-dom";
+import { Button } from "../components/Button";
+import {
+  ArrowRight,
+  Sparkles,
+  Shield,
+  Users,
+  Award,
+  CheckCircle,
+} from "lucide-react";
 
 export default function Hero() {
   return (
     <section
       id="home"
-      className="relative md:min-h-[80vh] flex items-center justify-center bg-gradient-to-br from-neutral-50 via-white to-primary-50 overflow-hidden animate-fade-in pt-16 md:pt-0"
-      aria-label="Hero section"
+      className="relative  flex items-center justify-center bg-gradient-to-br from-slate-50 via-white to-blue-50/30 overflow-hidden"
+      aria-labelledby="hero-heading"
     >
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
+      <div className="absolute top-0 right-0 -translate-y-12 translate-x-12 w-96 h-96 bg-gradient-to-br from-blue-100/40 to-indigo-100/40 rounded-full blur-3xl -z-10" />
+      <div className="absolute bottom-0 left-0 translate-y-12 -translate-x-12 w-96 h-96 bg-gradient-to-tr from-purple-100/40 to-pink-100/40 rounded-full blur-3xl -z-10" />
+
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-16">
+        <div className="text-center">
+          {/* Trust banner */}
+          <div className="bg-gradient-to-r from-emerald-500/10 via-blue-500/10 to-purple-500/10 backdrop-blur-sm border border-white/20 rounded-2xl px-6 py-3 mb-8 max-w-md mx-auto">
+            <div className="flex items-center justify-center gap-3">
+              <div className="flex items-center gap-2">
+                <CheckCircle
+                  className="w-5 h-5 text-emerald-600"
+                  aria-hidden="true"
+                />
+                <span className="text-slate-700 font-semibold text-sm">
+                  Trusted by 10,000+ customers
+                </span>
+              </div>
+              <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+            </div>
+          </div>
+
+          {/* Main heading */}
+          <h1
+            id="hero-heading"
+            className="text-5xl md:text-7xl lg:text-8xl font-bold text-slate-900 mb-6 leading-tight"
+          >
+            Professional Car Care{" "}
+            <span className="block bg-gradient-to-r from-[#0437F2] via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+              At Your Doorstep
+            </span>
+          </h1>
+
+          <p className="text-xl md:text-2xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+            Experience premium vehicle washing services with eco-friendly
+            solutions. From cars and bikes to commercial vehicles - we bring the
+            sparkle to you.
+          </p>
+
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+            <Link to="/booking">
+              <Button
+                className="group relative px-8 py-4 bg-gradient-to-r from-[#0437F2] to-indigo-600 hover:from-[#0437F2] hover:to-indigo-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#0437F2]/25"
+                aria-label="Book your car wash service now"
+              >
+                <span className="flex items-center gap-2">
+                  Book Your Wash
+                  <ArrowRight
+                    className="w-5 h-5 transition-transform group-hover:translate-x-1"
+                    aria-hidden="true"
+                  />
+                </span>
+                {/* Button glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-[#0437F2] to-indigo-600 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10 blur-xl" />
+              </Button>
+            </Link>
+
+            <Link to="/franchise">
+              <Button
+                className="group px-8 py-4 bg-[#0437F2] hover:bg-[#032b9e] text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-[#0437F2] focus:outline-none focus:ring-4 focus:ring-[#0437F2]/25"
+                aria-label="Learn about franchise opportunities"
+              >
+                <span className="flex items-center gap-2">
+                  <Sparkles className="w-5 h-5 text-white" aria-hidden="true" />
+                  Become a Partner
+                </span>
+              </Button>
+            </Link>
+          </div>
+
+          {/* Trust indicators */}
+          <div className="flex flex-wrap justify-center gap-4 mb-12">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-50 text-blue-700 text-sm font-medium rounded-full border border-blue-200/50">
+              <Shield className="w-4 h-4" aria-hidden="true" />
+              <span>100% Safe & Secure</span>
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-50 text-emerald-700 text-sm font-medium rounded-full border border-emerald-200/50">
+              <Users className="w-4 h-4" aria-hidden="true" />
+              <span>Expert Team</span>
+            </div>
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-50 text-purple-700 text-sm font-medium rounded-full border border-purple-200/50">
+              <Award className="w-4 h-4" aria-hidden="true" />
+              <span>Eco-Friendly</span>
+            </div>
+          </div>
+
+          {/* Service highlights marquee */}
+          <div className="relative overflow-hidden bg-white/80 backdrop-blur-sm rounded-2xl p-2 md:p-6 shadow-lg border border-white/20">
+            <div className="overflow-hidden">
+              <div className="flex animate-marquee whitespace-nowrap">
+                <div className="flex items-center gap-8 px-4">
+                  <span className="text-slate-700 font-medium">
+                    🚗 Car Wash
+                  </span>
+                  <span className="text-slate-700 font-medium">
+                    🏍️ Bike Wash
+                  </span>
+                  <span className="text-slate-700 font-medium">
+                    🚛 Commercial Vehicles
+                  </span>
+                  <span className="text-slate-700 font-medium">
+                    ✨ Interior Detailing
+                  </span>
+                  <span className="text-slate-700 font-medium">
+                    🧽 Exterior Cleaning
+                  </span>
+                  <span className="text-slate-700 font-medium">
+                    💧 Waterless Wash
+                  </span>
+                </div>
+                <div className="flex items-center gap-8 px-4">
+                  <span className="text-slate-700 font-medium">
+                    🚗 Car Wash
+                  </span>
+                  <span className="text-slate-700 font-medium">
+                    🏍️ Bike Wash
+                  </span>
+                  <span className="text-slate-700 font-medium">
+                    🚛 Commercial Vehicles
+                  </span>
+                  <span className="text-slate-700 font-medium">
+                    ✨ Interior Detailing
+                  </span>
+                  <span className="text-slate-700 font-medium">
+                    🧽 Exterior Cleaning
+                  </span>
+                  <span className="text-slate-700 font-medium">
+                    💧 Waterless Wash
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Custom animations */}
       <style>
         {`
-          @keyframes slide-left {
+          @keyframes marquee {
             0% {
               transform: translateX(0%);
             }
             100% {
-              transform: translateX(-100%);
+              transform: translateX(-50%);
             }
           }
-          .animate-slide-left {
-            animation: slide-left 40s linear infinite;
+          .animate-marquee {
+            animation: marquee 10s linear infinite;
           }
         `}
       </style>
-      {/* Decorative gradient blobs */}
-      <div
-        aria-hidden="true"
-        className="absolute -top-20 -left-20 md:-top-40 md:-left-40 w-[300px] h-[300px] md:w-[600px] md:h-[600px] bg-gradient-to-tr from-primary-200/30 via-primary-100/20 to-transparent rounded-full blur-3xl z-0 animate-bounce-subtle"
-      />
-      <div
-        aria-hidden="true"
-        className="absolute -bottom-20 -right-20 md:-bottom-40 md:-right-40 w-[250px] h-[250px] md:w-[500px] md:h-[500px] bg-gradient-to-tl from-secondary-200/20 via-secondary-100/15 to-transparent rounded-full blur-3xl z-0"
-      />
-
-      <div className="relative z-10 w-full max-w-4xl px-4 md:px-6 pt-16 md:pt-32 flex flex-col items-center text-center">
-        {/* Brand icon */}
-        <div className="mb-4 md:mb-6 animate-slide-up">
-          <Sparkles className="w-12 h-12 md:w-16 md:h-16 text-primary-600 mx-auto" aria-hidden="true" />
-        </div>
-
-        <h1 className="text-3xl md:text-6xl font-extrabold tracking-tight text-neutral-900 mb-4 md:mb-6 leading-tight animate-slide-up">
-          ShineX: <span className="bg-gradient-to-r from-[#0437F2] to-[#0329c1] bg-clip-text text-transparent">Ask for Wash</span>
-        </h1>
-
-        <p className="text-base md:text-xl text-neutral-600 mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed animate-slide-up px-2">
-          Professional vehicle washing services at your doorstep. From cars and bikes to big vehicles - we deliver sparkling results with eco-friendly solutions.
-        </p>
-
-        <div className="flex flex-row gap-2 md:gap-4 animate-slide-up px-4">
-          <Link to="/booking">
-            <Button
-              className="group text-xs md:text-lg px-4 py-2 md:px-6 md:py-3 rounded-lg shadow-soft bg-[#0437F2] hover:bg-[#0329c1] text-white focus-visible:ring-2 focus-visible:ring-[#0437F2] focus-visible:ring-offset-2 transition-all duration-200 flex items-center justify-center gap-2 md:gap-3 hover:shadow-medium transform hover:-translate-y-0.5 whitespace-nowrap"
-              aria-label="Book a Wash"
-            >
-              Book a Wash
-              <ArrowRight className="hidden md:block w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" aria-hidden="true" />
-            </Button>
-          </Link>
-
-          <Link to="/franchise">
-            <Button
-              className="group text-xs md:text-lg px-4 py-2 md:px-6 md:py-3 rounded-lg shadow-soft bg-secondary-500 hover:bg-secondary-600 text-white focus-visible:ring-2 focus-visible:ring-secondary-500 focus-visible:ring-offset-2 transition-all duration-200 flex items-center justify-center gap-2 md:gap-3 hover:shadow-medium transform hover:-translate-y-0.5 whitespace-nowrap"
-              aria-label="Become a Franchise"
-            >
-              Become a Franchise
-              <Sparkles className="hidden md:block w-4 h-4 md:w-5 md:h-5 group-hover:scale-110 transition-transform" aria-hidden="true" />
-            </Button>
-          </Link>
-        </div>
-
-        {/* Trust indicators */}
-        <div className="mt-8 md:mt-12 flex flex-row items-center gap-4 md:gap-6 text-xs md:text-sm text-neutral-500 animate-slide-up px-4">
-          <div className="flex items-center gap-2">
-            <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-secondary-500 rounded-full"></div>
-            <span>Eco-friendly cleaning</span>
-          </div>
-          <div className="flex items-center gap-2">
-            <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-primary-500 rounded-full"></div>
-            <span>Professional service</span>
-          </div>
-          <Link to="/support" className="flex items-center gap-2 hover:text-green-600 transition-colors">
-            <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-green-500 rounded-full animate-pulse"></div>
-            <span>24/7 support</span>
-          </Link>
-        </div>
-
-        {/* Sliding services */}
-        <div className="mt-6 md:mt-8 overflow-hidden bg-white/90 backdrop-blur-sm py-3 px-4 rounded-xl shadow-soft border border-neutral-200/50">
-          <p className="text-sm md:text-base text-primary-700 animate-slide-left whitespace-nowrap font-semibold">
-            ⭐ Doorstep Car Wash ⭐ Home Car Detailing ⭐ Bike Wash at Home ⭐ Vehicle Cleaning Service ⭐ Foam Washing at Doorstep ⭐ Basic Car Washing Home Service ⭐ Eco-Friendly Car Wash ⭐ Professional Car Detailing ⭐ ⭐ Doorstep Car Wash ⭐ Home Car Detailing ⭐ Bike Wash at Home ⭐ Vehicle Cleaning Service ⭐ Foam Washing at Doorstep ⭐ Basic Car Washing Home Service ⭐ Eco-Friendly Car Wash ⭐ Professional Car Detailing ⭐
-          </p>
-        </div>
-      </div>
     </section>
   );
 }
