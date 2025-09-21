@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { CheckCircle } from 'lucide-react';
 // Custom button for maximum control
 
@@ -34,12 +35,11 @@ const packages = [
   },
 ];
 
-export default function Services({ onSelectPackage }) {
+export default function Services() {
   const [selected, setSelected] = useState(null);
 
   const handleSelect = (pkg) => {
     setSelected(pkg.name);
-    if (onSelectPackage) onSelectPackage(pkg.name);
   };
 
   return (
@@ -69,19 +69,21 @@ export default function Services({ onSelectPackage }) {
                   </li>
                 ))}
               </ul>
-              <button
-                type="button"
-                onClick={() => handleSelect(pkg)}
-                aria-pressed={selected === pkg.name}
-                className={`w-full mt-auto font-semibold rounded-full py-2.5 px-4 text-base flex items-center justify-center transition-all duration-200 border outline-none focus-visible:ring-2 focus-visible:ring-[#004289] focus-visible:ring-offset-2
-                  ${selected === pkg.name
-                    ? 'bg-[#004289] text-white border-[#004289] hover:bg-[#00336b]'
-                    : 'bg-white text-[#004289] border-[#004289] hover:bg-[#f0f6fa] hover:border-[#00336b]'}
-                `}
-                style={{ letterSpacing: 0.2 }}
-              >
-                {selected === pkg.name ? 'Selected' : 'Select Package'}
-              </button>
+              <Link to="/booking">
+                <button
+                  type="button"
+                  onClick={() => handleSelect(pkg)}
+                  aria-pressed={selected === pkg.name}
+                  className={`w-full mt-auto font-semibold rounded-full py-2.5 px-4 text-base flex items-center justify-center transition-all duration-200 border outline-none focus-visible:ring-2 focus-visible:ring-[#004289] focus-visible:ring-offset-2
+                    ${selected === pkg.name
+                      ? 'bg-[#004289] text-white border-[#004289] hover:bg-[#00336b]'
+                      : 'bg-white text-[#004289] border-[#004289] hover:bg-[#f0f6fa] hover:border-[#00336b]'}
+                  `}
+                  style={{ letterSpacing: 0.2 }}
+                >
+                  Book Now
+                </button>
+              </Link>
               {selected === pkg.name && (
                 <span className="absolute top-4 right-4 text-xs bg-[#004289] text-white px-3 py-1 rounded-full shadow-sm animate-fade-in">Selected</span>
               )}

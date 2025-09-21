@@ -1,47 +1,28 @@
-import React, { useState } from "react";
-import Header from "./sections/Header";
-import Hero from "./sections/Hero";
-import TrustBar from "./sections/TrustBar";
-import HowItWorks from "./sections/HowItWorks";
-import Services from "./sections/Services";
-import Differentiators from "./sections/Differentiators";
-import Footer from "./sections/Footer";
-import Testimonials from "./sections/Testimonials";
-import FinalCTA from "./sections/FinalCTA";
-import BookingModal from "./components/BookingModal";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Services from "./pages/Services";
+import Booking from "./pages/Booking";
+import Franchise from "./pages/Franchise";
+import Support from "./pages/Support";
+import CarWash from "./pages/services/CarWash";
+import BikeWash from "./pages/services/BikeWash";
+import BigVehicleWash from "./pages/services/BigVehicleWash";
 
 function App() {
-  const [isBookingOpen, setIsBookingOpen] = useState(false);
-  const [selectedPackage, setSelectedPackage] = useState(null);
-
-  const openBooking = (pkg) => {
-    if (pkg) setSelectedPackage(pkg);
-    setIsBookingOpen(true);
-  };
-  const closeBooking = () => setIsBookingOpen(false);
-
   return (
-    <>
-      <Header onBook={openBooking} />
-      <div className="pt-20">
-        {" "}
-        {/* Offset for fixed header */}
-        <Hero onBook={openBooking} />
-        <TrustBar />
-        <HowItWorks />
-        <Services onSelectPackage={openBooking} />
-        <Differentiators />
-        <Testimonials />
-        {/* Add other sections here: Testimonials, FinalCTA, Footer, etc. */}
-      </div>
-      <BookingModal
-        isOpen={isBookingOpen}
-        onClose={closeBooking}
-        selectedPackage={selectedPackage}
-      />
-      <FinalCTA onBook={openBooking} />
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/services/car-wash" element={<CarWash />} />
+        <Route path="/services/bike-wash" element={<BikeWash />} />
+        <Route path="/services/big-vehicle-wash" element={<BigVehicleWash />} />
+        <Route path="/booking" element={<Booking />} />
+        <Route path="/franchise" element={<Franchise />} />
+        <Route path="/support" element={<Support />} />
+      </Routes>
+    </Router>
   );
 }
 
