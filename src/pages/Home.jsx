@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "../sections/Header";
 import Hero from "../sections/Hero";
 import TrustBar from "../sections/TrustBar";
 import HowItWorks from "../sections/HowItWorks";
@@ -11,18 +10,12 @@ import Testimonials from "../sections/Testimonials";
 function Home() {
   return (
     <>
-      <Header />
-      <div className="pt-20">
-        {" "}
-        {/* Offset for fixed header */}
-        <Hero />
-        <TrustBar />
-        <HowItWorks />
-        <Services />
-        <Differentiators />
-        <Testimonials />
-      </div>
-      <Footer />
+      <Hero />
+      <TrustBar />
+      <HowItWorks />
+      <Services />
+      <Differentiators />
+      <Testimonials />
     </>
   );
 }

@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./sections/Header";
+import Footer from "./sections/Footer";
 import Home from "./pages/Home";
 import Services from "./pages/Services";
 import Booking from "./pages/Booking";
@@ -12,16 +14,22 @@ import BigVehicleWash from "./pages/services/BigVehicleWash";
 function App() {
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/services/car-wash" element={<CarWash />} />
-        <Route path="/services/bike-wash" element={<BikeWash />} />
-        <Route path="/services/big-vehicle-wash" element={<BigVehicleWash />} />
-        <Route path="/booking" element={<Booking />} />
-        <Route path="/franchise" element={<Franchise />} />
-        <Route path="/support" element={<Support />} />
-      </Routes>
+      <div className="min-h-screen flex flex-col">
+        <Header />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/services/car-wash" element={<CarWash />} />
+            <Route path="/services/bike-wash" element={<BikeWash />} />
+            <Route path="/services/big-vehicle-wash" element={<BigVehicleWash />} />
+            <Route path="/booking" element={<Booking />} />
+            <Route path="/franchise" element={<Franchise />} />
+            <Route path="/support" element={<Support />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </Router>
   );
 }
