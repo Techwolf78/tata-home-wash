@@ -43,8 +43,6 @@ export default function Header() {
             <div className="w-12 h-12 bg-gradient-to-br from-primary-600 to-primary-700 rounded-xl flex items-center justify-center shadow-soft group-hover:shadow-medium transition-all duration-300 group-hover:scale-105">
               <Sparkles className="w-7 h-7 text-white animate-pulse" aria-hidden="true" />
             </div>
-            {/* Animated ring */}
-            <div className="absolute inset-0 rounded-xl border-2 border-primary-300 animate-ping opacity-20" />
           </div>
           <div className="ml-4">
             <span className="font-bold text-2xl text-neutral-900 group-hover:text-primary-600 transition-colors">
