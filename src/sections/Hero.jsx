@@ -21,7 +21,7 @@ export default function Hero() {
             }
           }
           .animate-slide-left {
-            animation: slide-left 20s linear infinite;
+            animation: slide-left 40s linear infinite;
           }
         `}
       </style>
@@ -35,7 +35,7 @@ export default function Hero() {
         className="absolute -bottom-20 -right-20 md:-bottom-40 md:-right-40 w-[250px] h-[250px] md:w-[500px] md:h-[500px] bg-gradient-to-tl from-secondary-200/20 via-secondary-100/15 to-transparent rounded-full blur-3xl z-0"
       />
 
-      <div className="relative z-10 w-full max-w-4xl px-4 md:px-6 py-16 md:py-32 flex flex-col items-center text-center">
+      <div className="relative z-10 w-full max-w-4xl px-4 md:px-6 pt-16 md:pt-32 flex flex-col items-center text-center">
         {/* Brand icon */}
         <div className="mb-4 md:mb-6 animate-slide-up">
           <Sparkles className="w-12 h-12 md:w-16 md:h-16 text-primary-600 mx-auto" aria-hidden="true" />
@@ -88,8 +88,8 @@ export default function Hero() {
         </div>
 
         {/* Sliding services */}
-        <div className="mt-6 md:mt-8 overflow-hidden bg-neutral-50 py-2 rounded-lg">
-          <p className="text-xs md:text-sm text-neutral-700 animate-slide-left whitespace-nowrap font-medium">
+        <div className="mt-6 md:mt-8 overflow-hidden bg-white/90 backdrop-blur-sm py-3 px-4 rounded-xl shadow-soft border border-neutral-200/50">
+          <p className="text-sm md:text-base text-primary-700 animate-slide-left whitespace-nowrap font-semibold">
             ⭐ Doorstep Car Wash ⭐ Home Car Detailing ⭐ Bike Wash at Home ⭐ Vehicle Cleaning Service ⭐ Foam Washing at Doorstep ⭐ Basic Car Washing Home Service ⭐ Eco-Friendly Car Wash ⭐ Professional Car Detailing ⭐ ⭐ Doorstep Car Wash ⭐ Home Car Detailing ⭐ Bike Wash at Home ⭐ Vehicle Cleaning Service ⭐ Foam Washing at Doorstep ⭐ Basic Car Washing Home Service ⭐ Eco-Friendly Car Wash ⭐ Professional Car Detailing ⭐
           </p>
         </div>
