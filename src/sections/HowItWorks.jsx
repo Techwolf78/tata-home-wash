@@ -21,7 +21,7 @@ const steps = [
 
 export default function HowItWorks() {
   return (
-    <section id="process" className="py-8 md:py-12 bg-gradient-to-r from-neutral-50 via-white to-primary-50/30">
+    <section id="process" className="py-2 md:py-6 bg-gradient-to-r from-neutral-50 via-white to-primary-50/30">
       <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-extrabold text-center mb-8 text-[#0437F2] tracking-tight">
           How It Works

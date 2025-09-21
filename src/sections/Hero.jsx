@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button } from "../components/Button";
 import {
   ArrowRight,
   Sparkles,
@@ -60,7 +59,7 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Link to="/booking">
-              <Button
+              <button
                 className="group relative px-8 py-4 bg-gradient-to-r from-[#0437F2] to-indigo-600 hover:from-[#0437F2] hover:to-indigo-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-[#0437F2]/25"
                 aria-label="Book your car wash service now"
               >
@@ -73,11 +72,11 @@ export default function Hero() {
                 </span>
                 {/* Button glow effect */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#0437F2] to-indigo-600 rounded-xl opacity-0 group-hover:opacity-20 transition-opacity duration-300 -z-10 blur-xl" />
-              </Button>
+              </button>
             </Link>
 
             <Link to="/franchise">
-              <Button
+              <button
                 className="group px-8 py-4 bg-[#0437F2] hover:bg-[#032b9e] text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 border border-[#0437F2] focus:outline-none focus:ring-4 focus:ring-[#0437F2]/25"
                 aria-label="Learn about franchise opportunities"
               >
@@ -85,7 +84,7 @@ export default function Hero() {
                   <Sparkles className="w-5 h-5 text-white" aria-hidden="true" />
                   Become a Partner
                 </span>
-              </Button>
+              </button>
             </Link>
           </div>
 

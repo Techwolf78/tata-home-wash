@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { Button } from '../components/Button';
 import { Menu, X, Sparkles, Phone, Mail } from 'lucide-react';
 
 export default function Header() {
@@ -102,10 +101,10 @@ export default function Header() {
 
           {/* CTA Button */}
           <Link to="/booking">
-            <Button className="bg-gradient-to-r from-[#0437F2] to-[#0437F2] hover:from-[#0329c1] hover:to-[#0329c1] text-white px-6 py-2.5 rounded-lg shadow-soft hover:shadow-medium transition-all duration-200 flex items-center gap-2 hover:scale-105">
+            <button className="bg-gradient-to-r from-[#0437F2] to-[#0437F2] hover:from-[#0329c1] hover:to-[#0329c1] text-white px-6 py-2.5 rounded-lg shadow-soft hover:shadow-medium transition-all duration-200 flex items-center gap-2 hover:scale-105">
               Book Now
               <Sparkles className="w-4 h-4" aria-hidden="true" />
-            </Button>
+            </button>
           </Link>
         </div>
 

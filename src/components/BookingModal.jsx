@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import { Button } from './Button';
 
 const schema = z.object({
   name: z.string().min(2, 'Name is required'),
@@ -128,9 +127,9 @@ export default function BookingModal({ isOpen, onClose, selectedPackage }) {
               />
             </div>
             <div className="pt-2">
-              <Button type="submit" className="w-full text-base md:text-lg py-3 rounded-lg font-bold">
+              <button type="submit" className="w-full text-base md:text-lg py-3 rounded-lg font-bold bg-primary-600 hover:bg-primary-700 text-white transition-colors">
                 Confirm Booking
-              </Button>
+              </button>
             </div>
           </form>
         </div>
