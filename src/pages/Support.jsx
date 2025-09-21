@@ -88,7 +88,7 @@ function Support() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-neutral-50 to-primary-50/30 py-16">
+    <div className="min-h-screen bg-gradient-to-br from-neutral-50 to-primary-50/30 pt-24 pb-16">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
